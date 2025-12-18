@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+form {
+    width: 280px;
+    height: 390px;
+    padding: 20px;
+    background-color: #353333;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+#input {
+    font-size: 1.2em;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.calculadora__teclas {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.calculadora__teclas-operadores {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    height: 100%;
+}
+
+.calculadora__teclas-numeros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 0 2px 0 0;
+}
+
+.btn-teclas__numeros,
+.btn__operadores {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn-teclas__numeros {
+    padding: 1em;
+    height: 63px;
+    width: 60px;
+    font-size: 1.2em;
+}
+
+.btn__operadores {
+    height: 51px;
+    width: 50px;
+    padding: 0.5em;
+    font-size: 1.8em;
+    background-color: rgb(214, 156, 32);
+}
+
+.btn-teclas__numeros--zero {
+    width: 123px;
+}

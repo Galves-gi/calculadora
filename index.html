@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <form class="calculadora" data-formulario>
+
+            <input type="text" name="operacao" id="input" data-formulario-input>
+
+            <div class="calculadora__teclas">
+
+                <div class="calculadora__teclas-numeros">
+
+                    <button class="btn-teclas__numeros" value="1">1</button>
+                    <button class="btn-teclas__numeros" value="2">2</button>
+                    <button class="btn-teclas__numeros" value="3">3</button>
+                    <button class="btn-teclas__numeros" value="4">4</button>
+                    <button class="btn-teclas__numeros" value="5">5</button>
+                    <button class="btn-teclas__numeros" value="6">6</button>
+                    <button class="btn-teclas__numeros" value="7">7</button>
+                    <button class="btn-teclas__numeros" value="8">8</button>
+                    <button class="btn-teclas__numeros" value="9">9</button>
+                    <button class="btn-teclas__numeros btn-teclas__numeros--zero" value="0">0</button>
+                    <button class="btn-teclas__numeros" value=".">.</button>
+
+                </div>
+
+                <div class="calculadora__teclas-operadores">
+                    <button class="btn__operadores" value="/">/</button>
+                    <button class="btn__operadores" value="*">*</button>
+                    <button class="btn__operadores" value="-">-</button>
+                    <button class="btn__operadores" value="+">+</button>
+                    <button class="btn__operadores" data-formulario-enviar type="button">=</button>
+                </div>
+
+            </div>
+        </form>
+
+    </main>
+
+    <script src="/js/calculadora.js"></script>
+
+</body>
+
+</html>
