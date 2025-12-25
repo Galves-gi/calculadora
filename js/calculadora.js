@@ -1,5 +1,4 @@
-const btns = document.querySelectorAll('[data-btn]')
-const formularioBtnEnviar = document.querySelector('[data-enviar]')
+/* const btns = document.querySelectorAll('[data-btn]')
 const formularioInput = document.querySelector('[data-formulario-input]')
 
 let listaConta = []
@@ -9,13 +8,13 @@ let ultimoOperador = 0
 
 btns.forEach(btn=>{
     btn.addEventListener('click', (e)=>{
+        
         e.preventDefault()
 
         operacao += e.target.value //concatenação
         formularioInput.value = operacao //ultimo valor
-
         console.log(operacao);
-
+        
         if (operacao.slice(-1) === '+' || operacao.slice(-1) === '-' || operacao.slice(-1) === '/' || operacao.slice(-1) === '*') {
 
             indiceOperador = operacao.length
@@ -30,35 +29,16 @@ btns.forEach(btn=>{
             ultimoOperador = indiceOperador
             console.log(listaConta)
             
+        }else if(operacao.slice(-1) === '='){
+
+            indiceOperador = operacao.length
+            const conta = operacao.substring(0,indiceOperador - 1)
+            formularioInput.value = ''
+            formularioInput.value = eval(conta)
+
         }
 
     })
-})
-
-/* formularioBtnEnviar.addEventListener('click',(e)=>{
-    //e.preventDefault()
-    alert('calcular')
-
-    switch (operacao) {
-        case '+':
-            alert('somar')
-            break;
-
-        case '-':
-            alert('menos')
-            break;
-
-        case '*':
-            alert('multiplicação')
-            break;
-
-        case '/':
-            alert('divisão')
-            break;                
-
-        default:
-            break;
-    }
 }) */
 
 
@@ -76,3 +56,31 @@ Etapas:
 
 
 */
+
+const btns = document.querySelectorAll('[data-btn]')
+const formularioInput = document.querySelector('[data-formulario-input]')
+let operacao = ''
+
+btns.forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+        
+        e.preventDefault()
+
+        operacao += e.target.value //concatenação
+        formularioInput.value = operacao //ultimo valor
+        console.log(operacao);
+
+        if(operacao.slice(-1) === '='){
+
+            const conta = operacao.substring(0,operacao.length - 1)
+            formularioInput.value = ''
+            formularioInput.value = eval(conta)
+        }
+
+    })
+})
+
+// mensagem quando começar * /
+// usar teclado
+// limpar (com teclado e toda as vezes que click no input)
+// permitir copiar no input
